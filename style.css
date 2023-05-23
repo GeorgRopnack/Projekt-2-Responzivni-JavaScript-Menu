@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+body .hidden {
+  display: none;
+}
+body .dropdown {
+  display: none;
+}
+body header {
+  background-color: #15304c;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header svg {
+  filter: invert(100%);
+  height: 3.5rem;
+  width: 3.5rem;
+  cursor: pointer;
+}
+body header ul {
+  display: flex;
+}
+body header ul li {
+  margin-right: 2rem;
+}
+body header ul li a {
+  font-weight: 500;
+  color: white;
+}
+body main {
+  background: url("img/background.webp");
+  min-height: calc(100vh - 70px);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 601px) {
+  header ul {
+    display: flex !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body header {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  body header .logo-dropdown-group {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  body header .dropdown {
+    display: block;
+  }
+  body header ul {
+    width: 100%;
+    background-color: #15304c;
+    top: 110px;
+    position: absolute;
+    text-align: center;
+    flex-direction: column;
+  }
+  body header ul li {
+    padding: 0.2rem;
+  }
+}
